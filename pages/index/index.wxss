@@ -1,0 +1,5 @@
+/* pages/index/index.wxss */
+text {
+  /* 主题，注意使用方式 */
+  color: var(--themeColor);
+}
