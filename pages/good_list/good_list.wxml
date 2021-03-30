@@ -1,2 +1,29 @@
 <!--pages/good_list/good_list.wxml-->
-<text>pages/good_list/good_list.wxml</text>
+<view>
+  <!-- 搜索 -->
+  <search-input></search-input>
+  <!-- 搜索结束 -->
+
+  <!-- tab切换 -->
+  <tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+    <block wx:if="{{tabs[0].isActive}}">
+      <view class="tab-item">
+        <navigator
+          wx:for="{{goodList}}"
+          wx:key="goods_id"
+        >
+          <view class="tab-item-img">
+          <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
+        </view>
+        <view class="tab-item-info">
+          <text>{{item.goods_name}}</text>
+          <text> ￥{{item.goods_price}}</text>
+        </view>
+        </navigator>
+      </view>
+    </block>
+    <block wx:elif="{{tabs[1].isActive}}">2</block>
+    <block wx:else="{{tabs[2].isActive}}">3</block>
+  </tabs>
+  <!-- tab结束 -->
+</view>
