@@ -14,3 +14,7 @@ page {
   /* 定义统一字体大小 */
   font-size: 28rpx;
 }
+
+image {
+  width: 100%;
+}
