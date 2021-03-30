@@ -3,3 +3,58 @@ text {
   /* 主题，注意使用方式 */
   color: var(--themeColor);
 }
+
+/* 技巧：适应屏幕 */
+.swiper-banner swiper {
+  width: 750rpx;
+  height: 340rpx;
+}
+.swiper-banner image {
+  width: 100%;
+}
+/* 导航 */
+.nav-box {
+  display: flex;
+}
+.nav-img-box {
+padding: 10rpx;
+  flex: 1;
+}
+.nav-img-box image {
+  width: 100%;
+}
+
+/* 楼层 */
+.index-floor {
+
+}
+.floor-group {
+
+}
+.floor-title {
+  margin: 10rpx;
+}
+.floor-title image {
+  width: 100%;
+}
+.floor-list {
+  overflow: hidden;
+}
+.floor-list navigator  {
+  float: left;
+  width: 32%;
+}
+.floor-list navigator:nth-last-child(-n+4)  {
+  height: calc(31.33vw * 386 / 232 / 2);
+  border-left: 10rpx solid #fff;
+}
+.floor-list navigator:nth-child(2) {
+  border-bottom: 5rpx solid #fff;
+}
+.floor-list navigator:nth-child(3) {
+  border-bottom: 10rpx solid #fff;
+}
+.floor-list navigator image {
+  width: 100%;
+  height: 100%;
+}
