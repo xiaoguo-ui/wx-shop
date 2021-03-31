@@ -4,7 +4,7 @@
   padding: 10rpx;
   background-color: var(--themeColor);
 }
-.search-input navigator {
+.search-input .nav {
   height: 100%;
   display: flex;
   justify-content: center;

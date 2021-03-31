@@ -1,1 +1,94 @@
 /* pages/good_detail/good_detail.wxss */
+page {
+  padding-bottom: 90rpx;
+}
+.swiper-banner {
+  height: 70vw;
+  text-align: center;
+}
+.swiper-banner-item image {
+  width: 60%;
+}
+
+/* 商品详情 */
+.good-price, .good-list-info {
+  padding: 15rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  color:var(--themeColor);
+}
+.good-info {
+  display: flex;
+}
+.good-info .good-name {
+  flex: 5;
+  color: #000;
+  font-size: 30rpx;
+  padding: 0 10rpx;
+  /* 省略 */
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.good-info .good-collect {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-left: 5rpx solid #ccc;
+}
+.good-info .good-collect view {
+  padding: 5rpx;
+}
+
+.good-list-info {
+  padding: 30rpx;
+  font-size: 30rpx;
+}
+
+.good-bottom {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 70rpx;
+}
+.buttom-item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16rpx;
+}
+.buttom-item button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.bottom-car {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ed1c24;
+  font-size: 25rpx;
+}
+.bottom-shop {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--themeColor);
+  font-size: 25rpx;
+}
+

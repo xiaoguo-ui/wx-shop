@@ -23,6 +23,12 @@
           "pathName": "pages/good_list/good_list",
           "query": "cid=5",
           "scene": null
+        },
+        {
+          "name": "商品详情",
+          "pathName": "pages/good_detail/good_detail",
+          "query": "goods_id = 43985",
+          "scene": null
         }
       ]
     }

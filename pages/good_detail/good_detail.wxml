@@ -1,2 +1,73 @@
 <!--pages/good_detail/good_detail.wxml-->
-<text>pages/good_detail/good_detail.wxml</text>
+<view>
+  <!-- 轮播图开始 -->
+  <swiper 
+    class="swiper-banner" 
+    indicator-dots 
+    autoplay 
+    interval="2000"
+    indicator-color="rgba(0, 0, 0, .3)"
+    indicator-active-color="#eb4450"
+    circular
+    
+    >
+    <swiper-item 
+      class="swiper-banner-item" 
+      wx:for="{{goodDetail.pics}}" 
+      wx:key="pics_id" 
+      bindtap="onPreviewImage"
+      data-url="{{item.pics_mid}}"
+      >
+      <image mode="widthFix" src="{{item.pics_mid}}"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 轮播图结束 -->
+
+  <!-- 商品详情 -->
+  <view class="good-detail">
+    <view class="good-price">
+     ￥{{ goodDetail.goods_price}}
+    </view>
+    <view class="good-info">
+      <view class="good-name">{{goodDetail.goods_name}}</view>
+      <view class="good-collect">
+        <view class="iconfont icon-shoucang"></view>
+        <text>收藏</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 商品详细图片 -->
+  <view>
+    <view class="good-list-info">图文详情</view>
+    <view>
+      <rich-text nodes="{{goodDetail.goods_introduce}}"></rich-text>
+    </view>
+  </view>
+
+  <!-- 底部 -->
+  <view class="good-bottom">
+    <view class="buttom-item">
+      <view class="iconfont icon-kefu"></view>
+      <text>客服</text>
+      <button open-type="contact"></button>
+    </view>
+    <view class="buttom-item">
+      <view class="iconfont icon-fenxiang"></view>
+      <text>分享</text>
+      <button open-type="share"></button>
+    </view>
+
+    <navigator class="buttom-item" open-type="switchTab" url="/pages/cart/cart">
+      <view class="iconfont icon-gouwuche"></view>
+      <text>购物车</text>
+    </navigator>
+
+    <view class="bottom-car" bindtap="handleCartAdd">
+      <text>加入购物车</text>
+    </view>
+    <view class="bottom-shop">
+      <text>立即购买</text>
+    </view>
+  </view>
+</view>

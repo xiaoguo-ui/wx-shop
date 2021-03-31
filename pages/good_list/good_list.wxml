@@ -11,6 +11,7 @@
         <navigator
           wx:for="{{goodList}}"
           wx:key="goods_id"
+          url="/pages/good_detail/good_detail?goods_id = {{item.goods_id}}"
         >
           <view class="tab-item-img">
           <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
